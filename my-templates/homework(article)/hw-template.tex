@@ -1,0 +1,71 @@
+% ==================================================
+% ==================== PACKAGES ====================
+% ==================================================
+\documentclass[18pt]{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{arydshln}
+\usepackage{extarrows}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage[
+    a4paper, 
+    top=2.0cm,  
+    left=2.0cm, 
+    right=2.0cm,
+    textheight=705.0pt
+]{geometry}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{enumitem}
+
+\linespread{1.5}
+\setlength{\parindent}{0pt}
+\setlength{\skip\footins}{2.0\baselineskip} 
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.0pt}
+% ==================================================
+
+% ==================================================
+% ------------------ CHANGE HERE -------------------
+% ==================================================
+\newcommand\course{Course ID - Course Name}
+\newcommand\semester{20xx XXXXX}
+\newcommand\hwnumber{00}
+\newcommand\myName{Your Name}
+\newcommand\myID{Your ID}
+% ==================================================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% {
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\textbf{ID Num:}\quad\ \myID\\
+\textbf{Name:} \myName }
+\rhead{\semester}
+\chead{\Large \textbf{Homework \hwnumber}}
+\cfoot{\thepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% }
+\begin{document}         % <-- START
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% {
+\begin{center}
+\textbf{\huge{\course}} \\
+\end{center}
+\vspace{3.0em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% }
+
+\textbf{\large Exercise 1.}
+
+\vspace{1.5em}
+\textbf{\large Exercise 2.}
+
+\vspace{1.5em}
+\textbf{\large Exercise 3.}
+
+\vspace{1.5em}
+\textbf{\large Exercise 4.}
+
+\vspace{1.5em}
+\textbf{\large Exercise 5.}
+
+
+\end{document}           % <-- END

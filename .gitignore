@@ -1,0 +1,44 @@
+.DS_Store
+# ===== LaTeX auxiliary files =====
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.nav
+*.snm
+
+# ===== Index / glossary =====
+*.idx
+*.ilg
+*.ind
+*.glg
+*.glo
+*.gls
+*.ist
+*.acn
+*.acr
+*.alg
+
+# ===== Build directories =====
+_build/
+build/
+out/
+
+# ===== Editors =====
+*.swp
+*.swo
+*.tmp
+*.bak
+*.DS_Store
+
+# ===== latexmk =====
+latexmkrc

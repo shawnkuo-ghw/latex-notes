@@ -1,0 +1,103 @@
+\documentclass{article} % class of document
+% =============================== Packages =================================== %
+
+% \usepackage{showframe} % To render a frame marking the margins of a document
+\usepackage{lipsum}    % package for example texts
+\usepackage{authblk}   % package for making title
+\usepackage{fancyhdr}  % package for header and footer
+
+% =============================== Title ====================================== %
+
+\title{Title}
+\author[1]{Author One}
+\author[2]{Author Two}
+\affil[1]{School of Latex, Tex University \\ \texttt{emailone@example.com}}
+\affil[2]{School of Latex, Tex University \\ \texttt{emailtwo@example.com}}
+\date{Date \\ Location}
+
+% =========================== Header and Footer ============================== %
+
+\pagestyle{fancy}
+\fancyhf{} % clear
+\lhead{left header}
+\rhead{right header}
+\chead{center header}
+\lfoot{left footer}
+\rfoot{right footer}
+\cfoot{\thepage}
+
+% ---------------------------------------------------------------------------- %
+\begin{document}            % Start of document %
+% ---------------------------------------------------------------------------- %
+
+\maketitle % make title
+
+\lipsum[1-10] % This is an example text.
+
+\
+
+This is the most fundamental latex document.
+
+\
+
+itemize:
+\begin{itemize}
+    \item an item
+    \item an item
+    \item an item
+\end{itemize}
+
+\
+
+enumerate:
+\begin{enumerate}
+    \item item 1
+    \item item 2
+    \item item 3
+\end{enumerate}
+
+\
+
+Type of font:
+\begin{itemize}
+    \item \textbf{bold text}
+    \item \textit{italic text}
+    \item \texttt{code text}
+    \item \underline{underline}
+    \item \emph{important}
+\end{itemize}
+
+\
+
+verbatim for typing code snipptes:
+\begin{verbatim}
+#include <stdio.h>
+int main() {
+    printf("Hello Latex!\n");
+    return 0;
+}
+\end{verbatim}
+
+\
+
+fbox:
+\fbox{this is fbox}
+\fbox{\rule{0pt}{1.2em}this is also fbox}
+
+\
+
+Math Environments:
+
+$f(x) = x^2 + 1$
+
+$$
+g(x) = x^3 + 1
+$$
+
+\[
+h(x) = x^4 + 1
+\]
+
+% ---------------------------------------------------------------------------- %
+\end{document}                  % End of document %
+% ---------------------------------------------------------------------------- %

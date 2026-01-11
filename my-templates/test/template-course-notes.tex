@@ -1,0 +1,235 @@
+\documentclass[18pt, openany]{book}
+%%%%%%%%%%%%%%%%%%%%% Note Info. %%%%%%%%%%%%%%%%%%%
+
+\newcommand{\notesname}{Notes of Course}
+\newcommand{\authorname}{Author}
+\newcommand{\authoremail}{author.name@example.com}
+\newcommand{\authoruniversity}{University}
+
+%%%%%%%%%%%%%%%%%%%%% Packages %%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{ctex}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{amsmath,amsthm,amsfonts,mathrsfs,amssymb,amscd}
+\usepackage[bottom, hang,flushmargin]{footmisc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz-cd}
+\usepackage[most]{tcolorbox}
+\usepackage{thmtools}
+\tcbuselibrary{theorems}
+\tcbuselibrary{breakable}
+
+%%%%%%%%%%%%%%%%%%%%% Page Size / Head / Foot %%%%%%%%%%%%%%%%%%%%%
+% \usepackage{showframe} % To render a frame marking the margins of a document
+\usepackage[
+    a4paper, 
+    left=100pt, 
+    right=100pt,
+    % top=40pt,
+]{geometry}
+\marginparwidth = 0pt
+% \headheight = 40pt
+% \headsep = 15.0pt
+% \textheight = 710pt
+
+\setstretch{1.35} % the space between lines
+\setlength{\parindent}{0pt} % the indent at the beginning of each paragraph
+\setlength{\jot}{10pt}  % 设置每行之间的间距为 10pt
+
+\pagestyle{fancy}
+\fancyhf{} % clear the defalt style of page head and foot
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\rightmark}
+\fancyfoot[C]{\thepage}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%% Math Environments %%%%%%%%%%%%%%%%%%%%%
+
+\declaretheorem[numberwithin=section]{definition}
+\declaretheorem[numberwithin=section]{theorem}
+\declaretheorem[sibling=theorem]{proposition}
+\declaretheorem[sibling=theorem]{lemma}
+\declaretheorem[sibling=theorem]{corollary}
+\declaretheorem[numberwithin=section]{remark}
+\declaretheorem[numberwithin=section]{example}
+\declaretheorem[numberwithin=section]{exercise}
+
+\tcolorboxenvironment{definition} {colback=white, boxrule=0.5pt, sharp corners, breakable}
+\tcolorboxenvironment{theorem}    {colback=white, boxrule=0.5pt, sharp corners, breakable}
+\tcolorboxenvironment{proposition}{colback=white, boxrule=0.5pt, sharp corners, breakable}
+\tcolorboxenvironment{lemma}      {colback=white, boxrule=0.5pt, sharp corners, breakable}
+\tcolorboxenvironment{corollary}  {colback=white, boxrule=0.5pt, sharp corners, breakable}
+\tcolorboxenvironment{remark}     {colback=white, boxrule=0.5pt, sharp corners, breakable}
+\tcolorboxenvironment{example}    {colback=white, boxrule=0.5pt, sharp corners, breakable}
+\tcolorboxenvironment{exercise}   {colback=white, boxrule=0.5pt, sharp corners, breakable}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+\newenvironment{solution}{{\nointent\it Solution.\hspace{-\baselineskip} } }{\hfill$\blacksquare$\par}
+\newcommand{\defi}[2][]{\begin{definition} [\textbf{#1}] \normalfont #2 \end{definition}}
+\newcommand{\thm} [2][]{\begin{theorem}    [\textbf{#1}] \normalfont #2 \end{theorem}}
+\newcommand{\prop}[2][]{\begin{proposition}[\textbf{#1}] \normalfont #2 \end{proposition}}
+\newcommand{\lem} [2][]{\begin{lemma}      [\textbf{#1}] \normalfont #2 \end{lemma}}
+\newcommand{\cor} [2][]{\begin{corollary}  [\textbf{#1}] \normalfont #2 \end{corollary}}
+\newcommand{\rmk} [2][]{\begin{remark}     [\textbf{#1}] \normalfont #2 \end{remark}}
+\newcommand{\expl}[2][]{\begin{example}    [\textbf{#1}] \normalfont #2 \end{example}}
+\newcommand{\exrc}[2][]{\begin{exercise}   [\textbf{#1}] \normalfont #2 \end{exercise}}
+\newcommand{\prof}[1]{\begin{proof} #1 \end{proof}}
+\newcommand{\soln}[1]{\begin{solution} #1 \end{solution} }
+%\renewcommand{\thesection}{\arabic{section}}  % 将 section 的编号设为 1, 2, 3 ...
+%\renewcommand{\thesubsection}{\thesection}    % 将 subsection 的编号设为与 section 相同
+%\numberwithin{theorem}{section}               % 使定理编号跟随 section 重置
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%% Title / Contents %%%%%%%%%%%%%%
+
+\title{ \HRule{1.5pt} \\ [15.0pt] \LARGE \textbf{\notesname} \HRule{1.5pt} }
+\author{ 
+    \textbf{\authorname} \\ 
+    \authoruniversity \\ 
+    \href{mailto:\authoremail}{\texttt{\authoremail}}
+}
+\date{\textbf{Notes Date}}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\setcounter{page}{1}
+
+% Bibliography --------------------------------------
+
+\begin{thebibliography}{99}
+    \bibitem{1} Author Name. \textit{Title of the Book}. Publisher, Year.
+\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%% Chapter 1 %%%%%%%%%%%%%%%%%%%%%
+\chapter{First Chapter Name}
+
+%%%%%%%%%%%%%%%%%%%%% Section 1 %%%%%%%%%%%%%%%%%%%%%
+\section{First Section Name}
+
+\subsection{All Math Environments}
+
+\defi[Definition Name]{
+    Definition Explanation from \cite{1}.
+}
+
+\thm[Theorem Name]{ \label{good_thm}
+    Theorem Explanation.
+}
+
+\prof{
+    Here we write\footnote{This is a footnote.} our proof.
+}
+
+\prop[Proposition Name]{
+    Proposition Explanation.
+}
+
+\lem[Lemma Name]{
+Lemma Explanation.
+\begin{itemize}
+    \item item one
+    \item item two
+\end{itemize}
+}
+
+\cor[Corollary Name]{
+    Corollary Explanation.
+}
+
+\rmk[Remark Name]{
+    Remark Explanation.
+}
+
+\expl[Example Name]{
+    Example Explanation.
+}
+
+% \soln{
+%     Here we write our solution.
+% }
+
+\exrc[Exercise Name]{
+    Exercise Explanation.
+}
+
+%%%%%%%%%%%%%%%%%%%%% Section 2 %%%%%%%%%%%%%%%%%%%%%
+\section{Second Section Name}
+
+\lipsum[1-2]
+
+
+%%%%%%%%%%%%%%%%%%%%% Section 3 %%%%%%%%%%%%%%%%%%%%%
+\section{Third Section Name}
+
+\defi[Definition Name]{
+    Definition Explanation.
+}
+
+\thm[Theorem Name]{
+    Theorem Explanation.
+}
+
+\prof{
+    Here\footnote{This is another footnote.} we write our proof.
+    We can refer a good theorem \hyperref[good_thm]{good thm 1.1.1}
+}
+
+\prop[Proposition Name]{
+    Proposition Explanation.
+}
+
+\lem[Lemma Name]{
+Lemma Explanation.
+\begin{itemize}
+    \item item one
+    \item item two
+\end{itemize}
+}
+
+\cor[Corollary Name]{
+    Corollary Explanation.
+}
+
+\rmk[Remark Name]{
+    Remark Explanation.
+}
+
+\expl[Example Name]{
+    Example Explanation.
+}
+
+% \soln{
+%     Here we write our solution\footnote{
+%         Here we have ananother footnote.
+%     }.
+% }
+
+\exrc[Exercise Name]{
+    Exercise Explanation.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document End %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

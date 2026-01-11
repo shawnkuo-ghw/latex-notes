@@ -1,0 +1,114 @@
+\documentclass[a4paper, openany]{book} % class of document
+% openany: chapters of sections can start at any page without blank 
+% pages being inserted automatically
+
+% =============================== Book Info ================================== %
+
+% ------- Notes Title ------
+\newcommand{\notesname}{Notes of Course}
+% ------- Author One -------
+\newcommand{\authorOnename}{Author One}
+\newcommand{\authorOneaffil}{University One}
+\newcommand{\authorOneemail}{authorOne.name@example.com}
+% ------- Author Two -------
+\newcommand{\authorTwoname}{Author Two}
+\newcommand{\authorTwoaffil}{University Two}
+\newcommand{\authorTwoemail}{authorTwo.name@example.com}
+% ------ Location and Date -------
+\newcommand{\noteslocation}{Location}
+\newcommand{\notesdate}{MM DD, YYYY}
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}} % horizontal line
+
+% =============================== Packages =================================== %
+
+\usepackage{layout}    % show the layout of all pages
+% \usepackage{showframe} % to render a frame marking the margins of a document
+\usepackage{lipsum}    % example texts
+\usepackage{authblk}   % making title
+\usepackage{fancyhdr}  % header and footer
+\usepackage{hyperref}  % hyper reference
+\usepackage{setspace}
+\usepackage{authblk}
+\usepackage{etoolbox}
+
+% ====================== Page Size / Header / Footer ========================= %
+
+\usepackage[
+    left=100pt, 
+    right=100pt,
+    % bottom=2.5cm
+    % top=40pt,
+]{geometry} % page size setup
+\marginparwidth = 0pt % width of marginpar area
+\textheight = 630pt % height of text area
+\footskip = 45pt
+% \textwidth = 430pt % widthe of text area
+% \headheight = 40pt % widthe of header
+% \headsep = 15.0pt % distance between header and text area
+
+% \setlength{\parindent}{0pt} % the indent at the beginning of each paragraph
+\setstretch{1.20}           % the space between lines
+
+\pagestyle{fancy}
+\fancyhf{} % clear the defalt style of page head and foot
+\pagestyle{headings} % the style of page header and footer
+\lhead{left header}
+\chead{center header}
+\rhead{}
+% \lfoot{left footer}
+\cfoot{\thepage}
+% \rfoot{right footer}
+
+% ---------------------------------------------------------------------------- %
+\begin{document}            % Start of document %
+% ---------------------------------------------------------------------------- %
+
+\layout % show the page layout
+\pagenumbering{gobble} % 不显示页码
+
+% --------------------------------- Title ------------------------------------ %
+
+% ----- Notes Title -----
+\title{ \HRule{1.5pt} \\ [15.0pt] \LARGE \textbf{\notesname} \HRule{1.5pt} }
+% ----- Authors ------
+% Author One
+\author[1]{\textbf{\authorOnename}}
+\affil[1]{ \authorOneaffil \\ \href{mailto:\authorOneemail}{\texttt{\authorOneemail}} }
+% Author Two
+\author[2]{\textbf{\authorTwoname}}
+\affil[2]{ \authorTwoaffil \\ \href{mailto:\authorTwoemail}{\texttt{\authorTwoemail}} }
+% ----- Location and Date -----
+\date{\notesdate \\ \noteslocation}
+
+\maketitle % make title
+% \newpage % start a new page 
+\tableofcontents % TOC
+\newpage
+
+% ------------------------------ Chapter 1 ----------------------------------- %
+
+\pagenumbering{arabic} % 从这里开始显示页码
+\chapter{This is the first chapter} % chapter
+\setcounter{page}{1} % page 1 starts from this page
+\section{This is section 1.1} % section
+\lipsum[1-5] % example text
+\section{This is section 1.2}
+\lipsum[6-10] % example text.
+
+% ------------------------------- Chapter 2 ---------------------------------- %
+
+\chapter{This is chapter two}
+\section{This is section 2.1}
+\lipsum[11-25]
+This is a sentence in section 2.1, and this is an example of a 
+footnote\footnote{This is a footnode.}
+\newpage
+\section{This is a section for math environment}
+
+% ----------------------------- Bibliography --------------------------------- %
+
+\input{sections/bibliography}
+
+% ---------------------------------------------------------------------------- %
+\end{document}                % End of document %
+% ---------------------------------------------------------------------------- %
