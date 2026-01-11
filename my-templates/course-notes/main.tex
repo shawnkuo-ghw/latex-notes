@@ -40,11 +40,11 @@
     % top=40pt,
 ]{geometry} % page size setup
 \marginparwidth = 0pt % width of marginpar area
-\textheight = 630pt % height of text area
+\textheight = 630pt   % height of text area
 \footskip = 45pt
-% \textwidth = 430pt % widthe of text area
-% \headheight = 40pt % widthe of header
-% \headsep = 15.0pt % distance between header and text area
+% \textwidth = 430pt    % widthe of text area
+% \headheight = 40pt    % widthe of header
+% \headsep = 15.0pt     % distance between header and text area
 
 % \setlength{\parindent}{0pt} % the indent at the beginning of each paragraph
 \setstretch{1.20}           % the space between lines
@@ -64,7 +64,7 @@
 % ---------------------------------------------------------------------------- %
 
 \layout % show the page layout
-\pagenumbering{gobble} % 不显示页码
+\pagenumbering{gobble} % do not show page number
 
 % --------------------------------- Title ------------------------------------ %
 
@@ -73,10 +73,10 @@
 % ----- Authors ------
 % Author One
 \author[1]{\textbf{\authorOnename}}
-\affil[1]{ \authorOneaffil \\ \href{mailto:\authorOneemail}{\texttt{\authorOneemail}} }
+\affil[1]{\authorOneaffil \\ \href{mailto:\authorOneemail}{\texttt{\authorOneemail}}}
 % Author Two
 \author[2]{\textbf{\authorTwoname}}
-\affil[2]{ \authorTwoaffil \\ \href{mailto:\authorTwoemail}{\texttt{\authorTwoemail}} }
+\affil[2]{\authorTwoaffil \\ \href{mailto:\authorTwoemail}{\texttt{\authorTwoemail}}}
 % ----- Location and Date -----
 \date{\notesdate \\ \noteslocation}
 
@@ -85,29 +85,12 @@
 \tableofcontents % TOC
 \newpage
 
-% ------------------------------ Chapter 1 ----------------------------------- %
+% ------------------------------ Chapters ------------------------------------ %
 
-\pagenumbering{arabic} % 从这里开始显示页码
-\chapter{This is the first chapter} % chapter
-\setcounter{page}{1} % page 1 starts from this page
-\section{This is section 1.1} % section
-\lipsum[1-5] % example text
-\section{This is section 1.2}
-\lipsum[6-10] % example text.
-
-% ------------------------------- Chapter 2 ---------------------------------- %
-
-\chapter{This is chapter two}
-\section{This is section 2.1}
-\lipsum[11-25]
-This is a sentence in section 2.1, and this is an example of a 
-footnote\footnote{This is a footnode.}
-\newpage
-\section{This is a section for math environment}
-
-% ----------------------------- Bibliography --------------------------------- %
-
-\input{sections/bibliography}
+\pagenumbering{arabic} % show page number from here
+\include{sections/chapter01.tex}
+\include{sections/chapter02.tex}
+\include{sections/bibliography} % bibliography
 
 % ---------------------------------------------------------------------------- %
 \end{document}                % End of document %
